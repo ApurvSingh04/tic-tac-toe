@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="background"></div>
+    <div id="container">
+        <h1>Tic Tac Toe</h1>
+        <div id="game-mode">
+            <label for="mode-select">Select Game Mode:</label>
+            <select id="mode-select" onchange="changeGameMode()">
+                <option value="friend">Play with Friend</option>
+                <option value="computer">Play with Computer</option>
+            </select>
+        </div>
+        <div id="difficulty-level" style="margin-top: 10px; display: none;">
+            <label for="difficulty-select">Select Difficulty:</label>
+            <select id="difficulty-select" onchange="changeDifficulty()">
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Hard">Hard</option>
+            </select>
+        </div>
+        <div id="turn">Turn: Player 1</div>
+        <div id="board">
+            <div class="cell" onclick="makeMove(0)"></div>
+            <div class="cell" onclick="makeMove(1)"></div>
+            <div class="cell" onclick="makeMove(2)"></div>
+            <div class="cell" onclick="makeMove(3)"></div>
+            <div class="cell" onclick="makeMove(4)"></div>
+            <div class="cell" onclick="makeMove(5)"></div>
+            <div class="cell" onclick="makeMove(6)"></div>
+            <div class="cell" onclick="makeMove(7)"></div>
+            <div class="cell" onclick="makeMove(8)"></div>
+        </div>
+    </div>
+    <div id="popup" class="overlay">
+        <div class="popup">
+            <h2 id="popup-text"></h2>
+            <a onclick="restart()" class="close">OK</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('mode-select').addEventListener('change', function() {
+            const difficultyDiv = document.getElementById('difficulty-level');
+            if (this.value === 'computer') {
+                difficultyDiv.style.display = 'block';
+            } else {
+                difficultyDiv.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
