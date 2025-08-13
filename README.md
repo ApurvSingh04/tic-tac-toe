@@ -26,6 +26,9 @@ This project was built to:
 - Explore basic AI techniques and understand how decision-making algorithms work.
 - Have fun !
 
+## 📸 Screenshots
+<img width="1295" height="859" alt="Screenshot 2025-08-13 235304" src="https://github.com/user-attachments/assets/ffddf197-e3d0-4f04-a3ee-f6b409e10807" />
+
 ## Getting Started
 1. Clone or download this repository.
 2. Open `index.html` in any modern web browser.
