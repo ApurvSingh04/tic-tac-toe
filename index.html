@@ -10,22 +10,36 @@
     <div id="background"></div>
     <div id="container">
         <h1>Tic Tac Toe</h1>
-        <div id="game-mode">
-            <label for="mode-select">Select Game Mode:</label>
-            <select id="mode-select" onchange="changeGameMode()">
-                <option value="friend">Play with Friend</option>
-                <option value="computer">Play with Computer</option>
-            </select>
+        
+        <div class="game-controls">
+            <div class="control-row">
+                <div id="game-mode">
+                    <label for="mode-select">Game Mode:</label>
+                    <select id="mode-select" onchange="changeGameMode()">
+                        <option value="friend">Play with Friend</option>
+                        <option value="computer">Play with Computer</option>
+                    </select>
+                </div>
+                <div id="difficulty-level">
+                    <label for="difficulty-select">Difficulty:</label>
+                    <select id="difficulty-select" onchange="changeDifficulty()">
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                    </select>
+                </div>
+            </div>
         </div>
-        <div id="difficulty-level" style="margin-top: 10px; display: none;">
-            <label for="difficulty-select">Select Difficulty:</label>
-            <select id="difficulty-select" onchange="changeDifficulty()">
-                <option value="Easy">Easy</option>
-                <option value="Medium">Medium</option>
-                <option value="Hard">Hard</option>
-            </select>
+        
+        <div class="game-info">
+            <div id="turn">Turn: Player 1</div>
+            <div id="scores">
+                <p id="player1-score">Player 1: 0</p>
+                <p id="player2-score">Player 2: 0</p>
+                <p id="draw-score">Draws: 0</p>
+            </div>
         </div>
-        <div id="turn">Turn: Player 1</div>
+
         <div id="board">
             <div class="cell" onclick="makeMove(0)"></div>
             <div class="cell" onclick="makeMove(1)"></div>
@@ -49,11 +63,15 @@
         document.getElementById('mode-select').addEventListener('change', function() {
             const difficultyDiv = document.getElementById('difficulty-level');
             if (this.value === 'computer') {
-                difficultyDiv.style.display = 'block';
-            } else {
+                difficultyDiv.style.display = 'flex';
+            }else{
                 difficultyDiv.style.display = 'none';
             }
         });
+        // Initialize difficulty display
+        if (document.getElementById('mode-select').value !== 'computer') {
+            document.getElementById('difficulty-level').style.display = 'none';
+        }
     </script>
 </body>
 </html>
