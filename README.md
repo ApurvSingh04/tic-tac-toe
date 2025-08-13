@@ -1,20 +1,32 @@
+# Tic Tac Toe – Web Edition
+A fun, browser-based Tic Tac Toe game built with HTML, CSS, and JavaScript.
+Created as a personal learning project to practice web development fundamentals and experiment with basic AI for games.
 
-# Tic Tac Toe (Basic Web Project)
+## ✨ Features
+- **Two Modes:** Play against a friend or challenge the computer.
+- **Three AI Difficulty Levels:**
+	- **Easy:** Completely random moves — great for beginners.
+	- **Medium:** Looks for a winning move, blocks your win if possible, otherwise plays randomly.
+	- **Hard:** Uses the minimax algorithm to play perfectly — beating it is nearly impossible!
+- **Score Tracking:** Keeps track of wins, losses, and draws.
+- **Clean & Simple UI:** Designed for quick play without distractions.
 
-This is a simple web-based Tic Tac Toe game made for fun and learning purposes. The project was created to practice basic web development skills using HTML, CSS, and JavaScript.
+## AI Logic
+- **Easy:** Pure randomness — no strategy at all.
+- **Medium:**
+	- Checks for a winning move.
+	- If none, blocks your potential win.
+	- Otherwise, picks a random move.
+- **Hard:** Implements minimax, exploring all possible outcomes to guarantee the best move.
 
-## Features
-- Play against a friend or the computer
-- Three computer difficulty levels: Easy, Medium, Hard
-- Simple, clean interface
-- Keeps track of scores and draws
+## 🎯 Purpose
+This project was built to:
+- Strengthen HTML, CSS, and JavaScript skills.
+- Learn how to implement simple game logic in a browser.
+- Explore basic AI techniques and understand how decision-making algorithms work.
+- Have fun !
 
-## Purpose
-This project is intended as a basic exercise in web development and game logic. It is not meant to be a production-level or advanced project, but rather a fun way to learn and experiment with JavaScript, DOM manipulation, and simple AI logic.
-
-## How to Run
+## Getting Started
 1. Clone or download this repository.
-2. Open `index.html` in your web browser.
-
-## Credits
-Made by Apurva Singh for learning and practice.
+2. Open `index.html` in any modern web browser.
+3. Start playing!
